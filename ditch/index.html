@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ditch - Tailwind Template</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+      integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <section class="py-16">
+      <div class="container max-w-screen-xl mx-auto px-4">
+        <nav
+          class="flex-wrap lg:flex items-center justify-between mb-24 xl:mb-48"
+          x-data="{navbarOpen:false}"
+        >
+          <div class="flex items-center mb-10 lg:mb-0">
+            <img src="assets/image/navbar-logo.svg" alt="Logo" />
+
+            <button
+              class="w-10 h-10 lg:hidden ml-auto flex items-center justify-center text-indigo-800 border border-indigo-800 rounded-md"
+              @click="navbarOpen = !navbarOpen"
+            >
+              <i data-feather="menu"></i>
+            </button>
+          </div>
+
+          <ul
+            class="lg:flex flex-col lg:flex-row lg:items-center lg:space-x-20 mb-10 xl:mb-0"
+            :class="{'hidden':!navbarOpen,'flex':navbarOpen}"
+          >
+            <li
+              class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0"
+            >
+              <a href="#">Services</a>
+            </li>
+            <li
+              class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0"
+            >
+              <a href="#">Works</a>
+            </li>
+            <li
+              class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0"
+            >
+              <a href="#">Blog</a>
+            </li>
+            <li
+              class="px-8 py-3 font-medium text-indigo-800 text-lg text-center border-2 border-indigo-800 rounded-md hover:bg-indigo-800 hover:text-white transiton ease-linear duration-300"
+            >
+              <a href="#">Hire me</a>
+            </li>
+          </ul>
+        </nav>
+
+        <header class="flex flex-col lg:flex-row justify-between lg:mb-20">
+          <div class="text-center lg:text-left mb-20 lg:mb-0">
+            <div
+              class="flex items-center justify-center lg:justify-start gap-2 mb-10"
+            >
+              <span class="w-20 h-0.5 bg-indigo-700"></span>
+            </div>
+
+            <h1
+              class="font-bold text-gray-800 text-4xl md:text-6xl xl:text-7xl mb-10"
+            >
+              Rafael Leonardo <br />
+              Madera López
+            </h1>
+
+            <p
+              class="font-normal text-gray-500 text-sm md:text-md xl:text-lg mb-10"
+            >
+              Hola, soy un estudiante de Ingenieria de Software <br />
+              Actualmente estudio en la Facultad de Matemáticas de la UADY
+              <br />
+            </p>
+          </div>
+
+          <div class="flex justify-center lg:justify-end w-full lg:w-auto">
+            <img
+              src="assets/image/WhatsApp Image 2025-02-19 at 5.43.43 PM.jpeg"
+              alt="Profile"
+              class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full"
+            />
+          </div>
+        </header>
+      </div>
+      <!-- container.// -->
+    </section>
+
+    <section class="py-16 lg:mb-20">
+      <h1
+        class="font-semibold text-gray-800 text-5xl text-center mb-20 xl:mb-40"
+      >
+        Educación
+      </h1>
+      <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="flex flex-col xl:flex-row gap-16">
+          <div
+            class="grid mx-auto grid-cols-2 text-center xl:text-left xl:gap-x-24 mt-10"
+          >
+            <div class="mb-16 xl:mb-0">
+              <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
+                Estudios
+              </h4>
+
+              <p class="font-normal text-gray-500 text-xs md:text-sm mb-5">
+                Actualmente me encuentro cursando la <br />Licenciatura en
+                Ingeniería de Software <br />
+                Universidad Autonóma de Yucatán
+              </p>
+            </div>
+
+            <div class="mb-16 xl:mb-0">
+              <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
+                Conocimientos
+              </h4>
+
+              <ul class="font-normal text-gray-500 text-xs md:text-sm mb-5">
+                <li>React</li>
+                <li>Angular</li>
+                <li>Typescript</li>
+                <li>Node JS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- container.// -->
+    </section>
+
+    <section class="py-16 lg:mb-20">
+      <div class="container max-w-screen-xl mx-auto px-4">
+        <h1
+          class="font-semibold text-gray-800 text-5xl text-center mb-20 xl:mb-40"
+        >
+          Experiencia Laboral
+        </h1>
+
+        <div
+          class="flex flex-col md:flex-row text-center md:text-left md:justify-between"
+        >
+          <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
+            <h6 class="font-medium text-gray-500 text-base uppercase">
+              Company
+            </h6>
+
+            <p class="font-semibold text-gray-600 text-base">
+              Seguros López & López
+              <span class="font-normal text-gray-400">/ Mérida</span>
+            </p>
+          </div>
+
+          <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
+            <h6 class="font-medium text-gray-500 text-base uppercase">
+              Position
+            </h6>
+
+            <p class="font-normal text-gray-500 text-base">Soporte TI</p>
+          </div>
+
+          <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
+            <h6 class="font-medium text-gray-500 text-base uppercase">Year</h6>
+
+            <p class="font-normal text-gray-500 text-base">2024</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-blue-50 py-16 mb-10">
+      <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="text-center">
+          <h1 class="font-medium text-gray-700 text-2xl md:text-5xl mb-5">
+            Contact with me
+          </h1>
+
+          <p class="font-normal text-gray-400 text-sm md:text-lg mb-20">
+            I’m not currently taking on new client work but feel free to contact
+            me for any <br />
+            other inquiries.
+          </p>
+
+          <div class="flex items-center justify-center space-x-4 md:space-x-8">
+            <a
+              href="#"
+              class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
+            >
+              <i
+                data-feather="twitter"
+                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
+              ></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
+            >
+              <i
+                data-feather="dribbble"
+                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
+              ></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
+            >
+              <i
+                data-feather="facebook"
+                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
+              ></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
+            >
+              <i
+                data-feather="codepen"
+                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
+              ></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
+            >
+              <i
+                data-feather="at-sign"
+                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
+              ></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
+            >
+              <i
+                data-feather="instagram"
+                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
